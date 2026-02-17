@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nashrah Anam — Portfolio</title>
+
+  <!-- Tailwind CDN (no npm needed) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* small custom overrides */
+    .card-glow {
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .card-glow:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- NAV -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <div>
+        <h1 class="text-2xl font-extrabold text-blue-600">Nashrah Anam</h1>
+        <div class="text-sm text-gray-500">4th-year AI & Data Science</div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <nav class="hidden md:flex gap-6 font-medium text-gray-700">
+          <a href="#about" class="hover:text-blue-600">About</a>
+          <a href="#skills" class="hover:text-blue-600">Skills</a>
+          <a href="#projects" class="hover:text-blue-600">Projects</a>
+          <a href="#stats" class="hover:text-blue-600">Stats</a>
+          <a href="#contact" class="hover:text-blue-600">Contact</a>
+        </nav>
+
+        <!-- dark mode toggle -->
+        <button id="themeToggle" class="p-2 rounded-md text-xl text-gray-600 hover:bg-gray-100"
+          aria-label="Toggle theme">
+          <i id="themeIcon" class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-6xl mx-auto px-6">
+    <section class="flex flex-col md:flex-row items-center justify-between gap-8 py-20">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+          Hi — I’m <span class="text-blue-600">Nashrah Anam</span>
+        </h2>
+        <p class="text-lg text-gray-700 mb-6">
+          An AI & Data Science student growing my skills in ML, NLP, and app development, while building projects that
+          reflect my journey.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center sm:items-start">
+          <a href="#projects" class="px-5 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+            🚀 See My Work
+          </a>
+
+          <a href="resume.pdf" download
+            class="px-5 py-3 bg-gray-100 text-gray-800 rounded-lg shadow hover:bg-gray-200 transition">
+              📄 Download Resume (PDF)
+          </a>
+
+
+        </div>
+
+        <div class="flex gap-4 mt-6 justify-center md:justify-start text-2xl">
+          <a href="https://github.com/NashAnam" target="_blank" rel="noopener" class="hover:text-blue-600"
+            title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="hover:text-blue-600"
+            title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:your.nashrahanam36@gmail.com" class="hover:text-blue-600" title="Email"><i
+              class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="md:w-1/3 flex justify-center">
+        <img src="nash_pic.jpg" alt="Nashrah Anam"
+          class="rounded-full border-4 border-blue-600 shadow-xl w-48 h-48 object-cover" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-white rounded-xl p-8 shadow mb-12">
+      <h3 class="text-2xl font-bold text-blue-600 mb-3">About Me</h3>
+      <p class="text-gray-700">
+        I’m a 4th-year AI & Data Science student at <strong>JNTU Hyderabad</strong>. Currently enhancing my coding
+        skills in Python & Java while working on projects in education and healthcare. Seeking opportunities to apply
+        and grow through internships and collaborative projects.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-8">
+      <h3 class="text-3xl font-bold text-center text-blue-700 mb-8">Skills</h3>
+      <div class="flex justify-center space-x-4 overflow-x-auto pb-4">
+        <div class="bg-white p-5 rounded-xl shadow card-glow text-center">🐍 <div class="mt-2 font-medium">Python</div>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow card-glow text-center">☕ <div class="mt-2 font-medium">Java
+            (Learning)</div>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow card-glow text-center">📊 <div class="mt-2 font-medium">R</div>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow card-glow text-center">📂 <div class="mt-2 font-medium">SQL
+            (Learning)</div>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow card-glow text-center">🤖 <div class="mt-2 font-medium">Machine
+            Learning</div>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow card-glow text-center">💬 <div class="mt-2 font-medium">NLP
+            (Chatbots, Sentiment)</div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-12">
+      <h3 class="text-3xl font-bold text-center text-blue-700 mb-8">Projects</h3>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+        <!-- HealthON -->
+        <article class="bg-white p-6 rounded-xl shadow card-glow">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl">🏥</div>
+            <div>
+              <h4 class="text-xl font-semibold">HealthON</h4>
+              <p class="text-gray-600 mt-1">
+                A comprehensive health monitoring app featuring 24-hour vital logging, telemedicine capabilities,
+                AI-generated progress reports, and real-time alerts.
+              </p>
+              <div class="flex gap-4 mt-4 text-blue-600">
+                <a href="https://github.com/NashAnam/HealthON" target="_blank" class="hover:underline">GitHub →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- AI Study Buddy -->
+        <article class="bg-white p-6 rounded-xl shadow card-glow">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl">📚</div>
+            <div>
+              <h4 class="text-xl font-semibold">AI Study Buddy</h4>
+              <p class="text-gray-600 mt-1">
+                A Streamlit-based study assistant with summarizer, exam planner, flashcard generator, study tracker, and
+                an offline chatbot tutor. Focus on practical student workflows and local DB storage.
+              </p>
+              <div class="flex gap-4 mt-4 text-blue-600">
+                <a href="https://github.com/NashAnam/AI_Study_Buddy" target="_blank" class="hover:underline">GitHub
+                  →</a>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Intelligent Mental Health Companion -->
+        <article class="bg-white p-6 rounded-xl shadow card-glow">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl">🧠</div>
+            <div>
+              <h4 class="text-xl font-semibold">Intelligent Mental Health Companion</h4>
+              <p class="text-gray-600 mt-1">
+                Chatbot-style companion that uses NLP, emotion classification, and sentiment analysis to support basic
+                mental health interactions and provide resources. Designed as a mini-project/paper-ready prototype.
+              </p>
+              <div class="flex gap-4 mt-4 text-blue-600">
+                <a href="https://github.com/Shazia970/Intelligent-Mental-Health-Companion" target="_blank"
+                  class="hover:underline">GitHub →</a>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Attendance Tracker -->
+        <article class="bg-white p-6 rounded-xl shadow card-glow">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl">📝</div>
+            <div>
+              <h4 class="text-xl font-semibold">Attendance Tracker</h4>
+              <p class="text-gray-600 mt-1">
+                A simple attendance management system (CSV-based), with basic analytics and export. Built for
+                class-level usage and easy integration with other student tools.
+              </p>
+              <div class="flex gap-4 mt-4 text-blue-600">
+                <a href="https://github.com/NashAnam/attendance-tracker" target="_blank" class="hover:underline">GitHub
+                  →</a>
+
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+
+      </div>
+    </section>
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="py-16 bg-gray-50 text-center">
+      <h2 class="text-3xl font-bold text-blue-600 mb-8">Achievements</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          🏆 <h3 class="font-semibold mt-2">Projects</h3>
+          <p>Built and deployed multiple AI projects including AI Study Buddy, Intelligent Mental Health Companion, and
+            HealthON.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          🚀 <h3 class="font-semibold mt-2">Community</h3>
+          <p>Presented academic projects in college, mentored juniors in Python basics, and actively learning advanced
+            AI concepts.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+          🌱 <h3 class="font-semibold mt-2">Growth</h3>
+          <p>Consistently exploring new domains like health, education, and productivity through hands-on projects.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-16 text-center bg-gray-50">
+      <h2 class="text-3xl font-bold text-blue-600 mb-8">Certifications & Learning</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow">
+          🎓 <h3 class="font-semibold mt-2">Python for Data Science</h3>
+          <p>Completed beginner-level course covering Python basics, data analysis, and visualization.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          📚 <h3 class="font-semibold mt-2">Machine Learning Specialization (Ongoing)</h3>
+          <p>Learning supervised and unsupervised ML models, focusing on real-world applications.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          🗄️ <h3 class="font-semibold mt-2">SQL & Java (Self-Learning)</h3>
+          <p>Currently practicing SQL for databases and Java for programming fundamentals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="py-20 bg-gray-50 text-center">
+      <h2 class="text-3xl font-bold text-blue-600 mb-12">Stats</h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Projects -->
+        <div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition">
+          <h2 class="text-3xl font-bold text-blue-600">5+</h2>
+          <p class="mt-2 text-gray-700">Projects Completed</p>
+        </div>
+
+        <!-- Future Goals -->
+        <div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition">
+          <h2 class="text-3xl font-bold text-blue-600">🚀</h2>
+          <p class="mt-2 text-gray-700">Preparing for Internships & Placements</p>
+        </div>
+
+        <!-- Domains -->
+        <div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition">
+          <h2 class="text-3xl font-bold text-blue-600">3+</h2>
+          <p class="mt-2 text-gray-700">Domains Explored: Health, Education, Productivity</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl text-white p-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h3 class="text-2xl font-bold mb-4">Contact</h3>
+        <p class="mb-6">Want to collaborate or see code? Reach out — or use the form below.</p>
+
+        <!-- Formspree: replace with your form id or remove form action to show a static email -->
+        <form action="https://formspree.io/f/yourformid" method="POST" class="grid gap-3">
+          <input name="name" type="text" placeholder="Your name" required class="p-3 rounded-md text-gray-800" />
+          <input name="email" type="email" placeholder="Your email" required class="p-3 rounded-md text-gray-800" />
+          <textarea name="message" rows="4" placeholder="Message" required
+            class="p-3 rounded-md text-gray-800"></textarea>
+          <div class="flex justify-center">
+            <button type="submit"
+              class="px-6 py-3 bg-white text-blue-700 rounded-md font-semibold hover:bg-gray-100">Send Message</button>
+          </div>
+        </form>
+
+        <div class="mt-6 flex justify-center gap-6 text-2xl">
+          <a href="https://github.com/NashAnam" target="_blank" rel="noopener" class="text-white/90 hover:text-white"><i
+              class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener"
+            class="text-white/90 hover:text-white"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:your.nashrahanam36@gmail.com" class="text-white/90 hover:text-white"><i
+              class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="bg-gray-900 text-gray-300 py-8">
+      <div class="container mx-auto flex flex-col items-center space-y-4">
+        <!-- Copyright -->
+        <p class="text-sm">© 2025 Nashrah Anam .</p>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-6">
+
+          <!-- GitHub -->
+          <a href="https://github.com/NashAnam" target="_blank"
+            class="text-white hover:text-gray-400 transition transform hover:scale-110">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.9c-3.2.7-3.9-1.6-3.9-1.6-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 1.6 2.6 1.1.1-.8.4-1.4.7-1.7-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.6 11.6 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12c0-6.3-5.2-11.5-11.5-11.5z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/nashrah-anam-351a322a0/" target="_blank"
+            class="text-white hover:text-blue-500 transition transform hover:scale-110">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.45 20.45h-3.6v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.5h-3.6V9h3.4v1.6h.1c.5-1 1.7-2.1 3.6-2.1 3.8 0 4.5 2.5 4.5 5.7v6.2zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.14 20.45H3.55V9h3.6v11.45z" />
+            </svg>
+          </a>
+
+          <!-- Email -->
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nashrahanam36@gmail.com" target="_blank"
+            class="text-white hover:text-red-500 transition transform hover:scale-110">
+            <!-- Email Icon -->
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zM4 18V8l8 5 8-5v10H4z" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- THEME TOGGLE SCRIPT (persists in localStorage) -->
+  <script>
+    (function () {
+      const icon = document.getElementById('themeIcon');
+      const toggle = document.getElementById('themeToggle');
+      const root = document.documentElement;
+      // initialize from localStorage
+      const dark = localStorage.getItem('site-theme') === 'dark';
+      if (dark) {
+        document.body.classList.add('bg-gray-900', 'text-white');
+        icon.className = 'fas fa-sun';
+      } else {
+        document.body.classList.remove('bg-gray-900', 'text-white');
+        icon.className = 'fas fa-moon';
+      }
+      toggle.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('bg-gray-900') && document.body.classList.toggle('text-white');
+        if (isDark) {
+          icon.className = 'fas fa-sun';
+          localStorage.setItem('site-theme', 'dark');
+        } else {
+          icon.className = 'fas fa-moon';
+          localStorage.setItem('site-theme', 'light');
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
